@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 1vh;
+}
+.body{
+    display: grid;
+    grid-template:
+    "tipo-moto                menu-pedido     pedido-detalhado" 15%
+    "cadastro_novo_endereco   menu-pedido     pedido-detalhado" 45%
+    "pedido                   menu-pedido     pedido-detalhado" 20%
+    "pedido                   novos-pedidos   novos-pedidos"    169px
+    "pedido                   nav             nav"              60px
+    /25%                    25%           1fr;
+}
+
+/* TIPO MOTO*/
+.tipo_moto{
+    grid-area:tipo-moto ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.tipo_moto div a{
+    display: none;
+}
+.tipo_moto a:first-child{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(img/Motorcycle.png);
+    cursor: pointer;
+    margin: auto;
+}
+/* CADASTRO NOVO ENDEREÇO*/
+.cadastro_novo_endereco{
+    grid-area: cadastro_novo_endereco;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+form input{
+    text-align: center;
+    margin-top: 15px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #C4C4C4;
+    background-color: #F8F8F8;
+}
+.form_div1{
+    display: flex;
+}
+.form_div1 div{
+    margin: 0px 10px;
+}
+#btn_submit{
+    display: none;
+}
+form label{
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-image: url(img/checked.png);
+    background-repeat: no-repeat;
+}
+
+/* PEDIDO */
+.pedido{
+    grid-area: pedido;
+    background-color: blue;
+}
+.menu_pedido{
+    grid-area: menu-pedido;
+    background-color: blueviolet;
+}
+.pedido_detalhado{
+    grid-area: pedido-detalhado;
+    background-color: brown;
+}
+.novos_pedidos{
+    grid-area: novos-pedidos;
+    background-color: burlywood;
+}
+nav{
+    grid-area: nav;
+    background-color: chartreuse;
+}

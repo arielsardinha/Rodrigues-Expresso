@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigues Expresso</title>
+    <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color:#6E2D8D;
+                text-align: center;
+                min-width: 580px;
+            }
+            figcaption{
+                margin: 50px 0px;
+            }
+            #btn_submit{
+                display: none;
+            }
+            label{
+                display: block;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                background-image: url(img/checked.png);
+                background-repeat: no-repeat;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 160px;
+                margin: 50px;
+            }
+            input:required{
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid #0000006c;
+                padding-bottom: 7px;
+                font-size: 17px;
+                outline: none;
+                color: white;
+            }
+            a{
+                color: #54FF6F;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+    </style>
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <figcaption>
+        <img src="img/logoComNome.png" alt="logo rodrigues expresso">
+    </figcaption>
+    <form action="" method="get">
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <input type="submit" value="" id="btn_submit">
+        <label for="btn_submit"></label>
+        <a href="http://">recuperar senha</a>
+    </form>
+</body>
+</html>
