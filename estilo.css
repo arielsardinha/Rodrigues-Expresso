@@ -9,11 +9,11 @@ body{
     display: grid;
     grid-template:
     "tipo-moto                menu-pedido     pedido-detalhado" 15%
-    "cadastro_novo_endereco   menu-pedido     pedido-detalhado" 45%
-    "pedido                   menu-pedido     pedido-detalhado" 20%
-    "pedido                   novos-pedidos   novos-pedidos"    169px
-    "pedido                   nav             nav"              60px
-    /25%                    25%           1fr;
+    "cadastro_novo_endereco   menu-pedido     pedido-detalhado" 35%
+    "pedido                   div     pedido-detalhado"         23%
+    "pedido                   novos-pedidos   novos-pedidos"    133px
+    "pedido                   nav             nav"              59px
+    /25%                      25%             1fr;
 }
 
 /* TIPO MOTO*/
@@ -24,6 +24,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    min-width: 190px;
 }
 .tipo_moto div a{
     display: none;
@@ -39,6 +40,7 @@ body{
 /* CADASTRO NOVO ENDEREÇO*/
 .cadastro_novo_endereco{
     grid-area: cadastro_novo_endereco;
+    min-width: 190px;
 }
 form{
     display: flex;
@@ -77,21 +79,145 @@ form label{
 /* PEDIDO */
 .pedido{
     grid-area: pedido;
-    background-color: blue;
+    overflow: auto;
+    max-height: 313px;
+    min-width: 190px;
 }
+.pedido div{
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    
+}
+.pedido figcaption{
+    margin: 0 5px ;
+    cursor: pointer;
+}
+/* MENU PEDIDO */
 .menu_pedido{
     grid-area: menu-pedido;
-    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+.menu_pedido div input{
+    font-size: 25px;
+    text-align: center;
+}
+.menu_pedido p{
+    margin: 0 10px;
+}
+.menu_pedido input{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    margin: 0 10px;
+}
+/* MENU PEDIDOS OPTION*/
+.menu_pedidos_option{
+    grid-area: div;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    margin: auto;
+}
+.menu_pedidos_opt_caixa{
+    display: flex;
+    justify-content: space-around;
+}
+#imprimir,#msg-cliente, #troca-moto, #mapa{
+    display: none;
+}
+.lb{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.img_imprimir{
+    background-image: url(img/Pickup-Point.png);
+}
+.msg-cliente{
+    background-image: url(img/Messaging.png);
+}
+.troca-moto{
+    position: relative;
+    left: 10px;
+    top: 5px;
+    background-image: url(img/Direction.png);
+}
+.mapa{
+    background-image: url(img/Pickup-Point.png);
+}
+/* PEDIDO DETALHADO */
 .pedido_detalhado{
     grid-area: pedido-detalhado;
     background-color: brown;
 }
+
+/* NOVOS PEDIDOS*/
 .novos_pedidos{
     grid-area: novos-pedidos;
-    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
 }
+.novos_pedidos input{
+    margin: 0 5px;
+}
+.inform{
+    background-color: yellow;
+    width: 175px;
+    margin: auto;
+    text-align: left;
+    overflow: auto;
+    height: 80px;
+    border-radius: 5px;
+}
+.inform-h1{
+    text-align: right;
+    font-weight: bolder;
+}
+.inform input{
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    margin-left: 5px;
+}
+.novos_pedidos div{
+    padding: 5px 0px;
+}
+.novos_pedidos_caixa{
+    width: 200px;
+    text-align: center;
+}
+.aceit-recusa input{
+    padding: 3px 9px;
+    border: 1px solid #DEFFE3;
+    background-color: #838383;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+/* NAV */
 nav{
     grid-area: nav;
-    background-color: chartreuse;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav input{
+    padding: 3px 9px;
+    border: 1px solid #DEFFE3;
+    background-color: #838383;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
 }
