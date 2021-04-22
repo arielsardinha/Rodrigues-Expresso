@@ -4,70 +4,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigues Expresso</title>
-    <style type="text/css">
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            body{
-                background-color:#6E2D8D;
-                text-align: center;
-                min-width: 580px;
-            }
-            figcaption{
-                margin: 50px 0px;
-            }
-            #btn_submit{
-                display: none;
-            }
-            label{
-                display: block;
-                width: 60px;
-                height: 60px;
-                cursor: pointer;
-                background-image: url(img/checked.png);
-                background-repeat: no-repeat;
-            }
-            form{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                height: 160px;
-                margin: 50px;
-            }
-            input:required{
-                background-color: transparent;
-                border: none;
-                border-bottom: 2px solid #0000006c;
-                padding-bottom: 7px;
-                font-size: 17px;
-                outline: none;
-                color: white;
-            }
-            a{
-                color: #54FF6F;
-                text-decoration: none;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 13px;
-            }
-            a:hover{
-                text-decoration: underline;
-            }
-    </style>
-    <script src="js.js" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <figcaption>
-        <img src="img/logoComNome.png" alt="logo rodrigues expresso">
-    </figcaption>
-    <form action="" method="get">
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <input type="submit" value="" id="btn_submit">
-        <label for="btn_submit"></label>
-        <a href="http://">recuperar senha</a>
-    </form>
+    <div class="body">
+        <section class="tipo_moto">
+            <div>
+                <a href="" id="moto_ol"></a>
+                <label for="moto_ol"></label>
+                <label for="moto_ol">Moto OL</label>
+            </div>
+            <div>
+                <a href="" id="moto_nuvem"></a>
+                <label for="moto_nuvem"></label>
+                <label for="moto_nuvem">Moto Nuvem</label>
+            </div>
+        </section>
+        <section class="cadastro_novo_endereco">
+            <form action="" method="get">
+                <input type="text" name="" placeholder="Endereço" required>
+                <div class="form_div1">
+                    <div>
+                        <input type="text" name="" placeholder="Numero" required>
+                        <input type="text" name="" placeholder="Complemento">
+                    </div>
+                    <div>
+                        <input type="tel"  name="" placeholder="Observaçoes">
+                        <input type="text" name="" placeholder="Nome" required>
+                    </div>
+                </div>
+                <input type="text" name="" placeholder="Observaçoes">
+                <input type="submit" value="" id="btn_submit">
+                <label for="btn_submit"></label>
+            </form>
+        </section>
+        <section class="pedido">
+            <div>
+                <p>Jacarepagua n° 324512</p> 
+                <figcaption>
+                    <img src="img/Motorcycle.png" alt="">
+                </figcaption>
+            </div>
+            <div>
+                <p>Jacarepagua n° 324512</p> 
+                <figcaption>
+                    <img src="img/Motorcycle.png" alt="">
+                </figcaption>
+            </div>
+            <div>
+                <p>Jacarepagua n° 324512</p> 
+                <figcaption>
+                    <img src="img/Motorcycle.png" alt="">
+                </figcaption>
+            </div>
+            <div>
+                <p>Jacarepagua n° 324512</p> 
+                <figcaption>
+                    <img src="img/Motorcycle.png" alt="">
+                </figcaption>
+            </div>
+            <div>
+                <p>Jacarepagua n° 324512</p> 
+                <figcaption>
+                    <img src="img/Motorcycle.png" alt="">
+                </figcaption>
+            </div>
+
+        </section>
+        <section class="menu_pedido">
+            <div>
+                <input type="text" value="Ariel" readonly>
+            </div>
+            <input type="text" value="(21)999666462" readonly >
+            <input type="text" value="Rua Algodao n° 462 ap 2001"readonly>
+            <p>Observaçoes</p>
+            <input type="text" value="Entregador Pedro" readonly >
+            <input type="text" value="Valor: $71,00" readonly>
+            <input type="text" value="Troco: 00,00" readonly >
+        </section>
+        <div class="menu_pedidos_option">
+            <div>
+                <input type="button" id="imprimir">
+                <label for="imprimir" class="img_imprimir lb"></label>
+                <label for="imprimir">Imprimir</label>
+            </div>
+            <div class="menu_pedidos_opt_caixa">
+                <input type="button" id="msg-cliente">
+                <label for="msg-cliente" class="msg-cliente lb"></label>
+                <input type="button" id="msg-cliente">
+                <label for="msg-cliente" class="msg-cliente lb"></label>
+                <input type="button" id="troca-moto">
+                <label for="troca-moto" class="troca-moto lb"></label>
+                <input type="button" id="mapa">
+                <label for="mapa" class="mapa lb"></label>
+                
+            </div>
+        </div>
+        <section class="pedido_detalhado"> pedido detalhado</section>
+        <section class="novos_pedidos">
+            <div class="novos_pedidos_caixa">
+                <div class="inform">
+                    <input type="text" value="COPACABANA" readonly class="inform-h1">
+                    <input type="text" value="Ovo Frito" readonly>
+                    <input type="text" value="Peixe Frito" readonly>
+                    <input type="text" value="Açai" readonly>
+                </div>
+                <div class="aceit-recusa">
+                    <input type="button" value="ACEITAR">
+                    <input type="button" value="RECUSAR">
+                </div>
+            </div>
+            <div class="novos_pedidos_caixa">
+                <div class="inform">
+                    <input type="text" value="COPACABANA" readonly class="inform-h1">
+                    <input type="text" value="Ovo Frito" readonly>
+                    <input type="text" value="Peixe Frito" readonly>
+                    <input type="text" value="Açai" readonly>
+                </div>
+                <div class="aceit-recusa">
+                    <input type="button" value="ACEITAR">
+                    <input type="button" value="RECUSAR">
+                </div>
+            </div>
+            <div class="novos_pedidos_caixa">
+                <div class="inform">
+                    <input type="text" value="COPACABANA" readonly class="inform-h1">
+                    <input type="text" value="Ovo Frito" readonly>
+                    <input type="text" value="Peixe Frito" readonly>
+                    <input type="text" value="Açai" readonly>
+                </div>
+                <div class="aceit-recusa">
+                    <input type="button" value="ACEITAR">
+                    <input type="button" value="RECUSAR">
+                </div>
+            </div>
+            <div class="novos_pedidos_caixa">
+                <div class="inform">
+                    <input type="text" value="COPACABANA" readonly class="inform-h1">
+                    <input type="text" value="Ovo Frito" readonly>
+                    <input type="text" value="Peixe Frito" readonly>
+                    <input type="text" value="Açai" readonly>
+                </div>
+                <div class="aceit-recusa">
+                    <input type="button" value="ACEITAR">
+                    <input type="button" value="RECUSAR">
+                </div>
+            </div>
+            <div class="novos_pedidos_caixa">
+                <div class="inform">
+                    <input type="text" value="COPACABANA" readonly class="inform-h1">
+                    <input type="text" value="Ovo Frito" readonly>
+                    <input type="text" value="Peixe Frito" readonly>
+                    <input type="text" value="Açai" readonly>
+                </div>
+                <div class="aceit-recusa">
+                    <input type="button" value="ACEITAR">
+                    <input type="button" value="RECUSAR">
+                </div>
+            </div>
+        </section>
+        <nav>
+            <input type="button" value="PEDIDOS">
+            <input type="button" value="CARDAPIO">
+            <input type="button" value="GESTAO">
+            <input type="button" value="FINANCEIRO">
+            <input type="button" value="PERFIL">
+        </nav>
+    </div>
 </body>
 </html>
